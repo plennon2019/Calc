@@ -33,6 +33,15 @@ public class CalculatorTest {
         //Exception e1 = assertThrows(IllegalArgumentException.class, ()->calc.subtract(1007,17));
     }
 
+    @DisplayName("subtract fail test for over 1000")
+    @Test
+    void testSubtractFail2()
+    {
+        Exception e = assertThrows(IllegalArgumentException.class, ()->calc.subtract(1021,17));
+        assertEquals("Invalid input", e.getMessage());
+        //Exception e1 = assertThrows(IllegalArgumentException.class, ()->calc.subtract(1007,17));
+    }
+
 
 
 }
